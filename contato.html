@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a InovaWeb e conheça nossas soluções digitais.">
+    <title>Contato | InovaWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Inova<span>Web</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Início</a></li>
+                    <li><a href="sobre.html" target="_blank">Sobre</a></li>
+                    <li><a href="servicos.html" target="_blank">Serviços</a></li>
+                    <li><a href="produtos.html" target="_blank">Produtos</a></li>
+                    <li><a href="contato.html" target="_blank">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="titulo-pagina">
+            <div class="container">
+                <h1>Entre em contato</h1>
+                <p>Estamos prontos para transformar sua ideia em realidade!</p>
+            </div>
+        </section>
+
+        <section class="contato container">
+            <div class="contato-info">
+                <h2>Fale com a InovaWeb</h2>
+                <p>
+                    Tem alguma dúvida ou deseja conhecer nossos serviços?
+                    Preencha o formulário. Será um prazer conversar com você!
+                </p>
+                <p><strong>E-mail:</strong> contato@inovaweb.com.br</p>
+                <p><strong>Atendimento:</strong> Segunda a sexta, das 9h às 18h.</p>
+            </div>
+            <div class="formulario">
+                <h2>Envie sua mensagem</h2>
+                <form action="#" method="get">
+                    <div class="campo">
+                        <label for="nome">Nome completo:</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            placeholder="Escreva sua mensagem"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+
+                <p class="aviso-formulario">
+                    Este formulário é demonstrativo e não envia mensagens reais.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 InovaWeb - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector(".formulario form");
+            if (form) {
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault(); // Impede o envio real para fins de demonstração
+                    
+                    const nome = document.getElementById("nome").value.trim();
+                    const email = document.getElementById("email").value.trim();
+                    const mensagem = document.getElementById("mensagem").value.trim();
+    
+                    if (nome === "" || email === "" || mensagem === "") {
+                        alert("Por favor, preencha todos os campos do formulário!");
+                        return;
+                    }
+    
+                    // Cria um alerta visual moderno ou mensagem de sucesso na tela
+                    alert("Obrigado, " + nome + "! Sua mensagem foi simulada com sucesso. Nossa equipe da InovaWeb entrará em contato em breve.");
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
